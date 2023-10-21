@@ -33,6 +33,10 @@ nav{
    justify-content: space-between;
    /*background-color: var(--gradient);
    /*padding: 20px 10%;*/
+   transition: 0.5s ease;
+}
+body.nav-design nav{
+   background-color: var(--gradient);
 }
 nav .logo {
    padding-left: 20px;
