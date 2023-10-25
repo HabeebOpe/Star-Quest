@@ -34,6 +34,7 @@ nav{
    /*background-color: var(--gradient);
    /*padding: 20px 10%;*/
    transition: 0.5s ease;
+   z-index: 1;
 }
 body.nav-design nav{
    background-color: var(--gradient);
@@ -214,35 +215,66 @@ nav .logo h1 span{
    padding: 10px;
 }
 .recent-launch-sec li{
-   background-repeat: no-repeat;
-   background-size: cover;
-   background-position: center;
-   display: flex;
-   align-items: flex-end;
+   position: relative;
    height: 350px;
    width: 30%;
    margin: 10px;
+   overflow: hidden;
 }
-.recent-launch-sec li:nth-child(1){
-   background-image: url(asset/20653_18.jpg)
-}
-.recent-launch-sec li:nth-child(2){
-   background-image: url(asset/28263_88.jpg)
-}
-.recent-launch-sec li:nth-child(3){
-   background-image: url(asset/26170_73.jpg)
+.recent-launch-sec li img{
+   width: 100%;
+   height: auto;
 }
 .recent-launch-sec li div{
+   position: absolute;
+   bottom: 0;
    width: 100%;
-   padding: 10px;
    background-color: var(--gradient)
 }
 .recent-launch-sec li div h2{
    font-size: 2rem;
    color: var(--body);
+   padding: 10px;
 }
 .recent-launch-sec li div button{
    margin: 10px 0;
+   width: 180px;
+   height: 50px;
+   border: none;
+   font-size: 20px;
+   margin: 10px;
+   color: var(--text);
+   background-color: var(--gradient-light);
+}
+@media (max-width: 600px){
+   .recent-launch-sec li{
+      width: 100%;
+   }
+}
+.planet-section{
+   background-image: url(asset/orsrc78446.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+   padding: 5%;
+   text-align: center;
+   color: #fff;
+}
+.planet-section h1{
+   font-size: 3.5rem;
+   -webkit-text-stroke: 0.3px #000;
+}
+.planet-section p{
+   font-size: 1.2rem;
+   font-weight: bold;
+   padding: 20px 8%;
+   -webkit-text-stroke: 0.3px #000;
+}
+.planet-section button{
    width: 180px;
    height: 50px;
    border: none;
@@ -252,10 +284,109 @@ nav .logo h1 span{
    background-color: var(--gradient-light);
 }
 @media (max-width: 600px){
-   .recent-launch-sec li{
+   .planet-section p{
+      padding: 10px;
+   }
+}
+.article-section{
+   padding: 5%;
+}
+.article-section h2{
+   text-align: center;
+   font-size: 2rem;
+   margin: 10px 0;
+}
+.article-section h2 span{
+   font-size: 50px;
+   color: var(--primary);
+}
+.article-sec ul{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+.article-sec ul li{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 45%;
+   margin: 10px 0;
+   padding: 10px;
+   background-color: var(--hex);
+   transition: 0.3s ease;
+}
+.article-sec ul li:hover{
+   border-bottom: 3px solid var(--primary);
+}
+.article-sec ul li img{
+   min-width: 100px !important;
+   height: 100px !important;
+   border-radius: 50%;
+   padding-right: 10px;
+}
+.article-sec ul li div h4{
+   padding: 5px 0;
+}
+.article-sec ul li div p{
+   font-size: 18px;
+}
+.article-sec ul li div p span:last-child{
+   color: var(--primary);
+   padding-left: 10px;
+}
+@media (max-width: 600px){
+   .article-sec ul{
+      justify-content: center;
+   }
+   .article-sec ul li{
+      width: 100%;
+   }
+   .article-section {
+      padding: 5%;
+   }
+}
+.today-section{
+   padding: 10%;
+}
+.today-section p{
+   font-size: 1.3rem;
+}
+.today-section h2{
+   padding: 10px 0;
+}
+.today-sec{
+   width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+.today-img{
+   width: 47%;
+   height: 350px;
+   overflow: hidden;
+}
+.today-img img{
+   width: 100%;
+   height: auto;
+}
+.today-text{
+   width: 50%;
+}
+@media (max-width: 600px){
+   .today-section{
+      padding: 10% 5%;
+   }
+   .today-sec{
+      justify-content: center;
+   }
+   .today-img{
+      width: 100%;
+   }
+   .today-text{
       width: 100%;
    }
 }
+
 
 
 
